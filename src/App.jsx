@@ -2,6 +2,7 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Features from './components/Features.jsx'
 import Process from './components/Process.jsx'
+import Architecture from './components/Architecture.jsx'
 import Testimonials from './components/Testimonials.jsx'
 import FounderNote from './components/FounderNote.jsx'
 import FinalCTA from './components/FinalCTA.jsx'
@@ -15,6 +16,7 @@ export default function App() {
         <Hero />
         <Features />
         <Process />
+        <Architecture />
         <Testimonials />
         <FounderNote />
         <FinalCTA />

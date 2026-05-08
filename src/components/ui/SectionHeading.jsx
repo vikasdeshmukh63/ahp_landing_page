@@ -2,7 +2,7 @@
  * @param {object} props
  * @param {string} [props.eyebrow]
  * @param {string} props.title — plain text before highlight
- * @param {string} [props.highlight] — segment styled with lime background
+ * @param {string} [props.highlight] — segment styled in blue
  * @param {string} [props.afterHighlight] — text after highlight
  * @param {'sm' | 'lg'} [props.size='lg']
  */
@@ -22,7 +22,7 @@ export default function SectionHeading({
   return (
     <div className={`space-y-4 ${className}`}>
       {eyebrow ? (
-        <p className="text-sm font-medium uppercase tracking-wide text-muted">
+        <p className="text-sm font-medium uppercase tracking-wide text-blue-500">
           {eyebrow}
         </p>
       ) : null}
@@ -31,7 +31,7 @@ export default function SectionHeading({
         {highlight ? (
           <>
             {' '}
-            <span className="rounded-md bg-lime px-1.5 py-0.5">{highlight}</span>
+            <span className="text-blue-500">{highlight}</span>
           </>
         ) : null}
         {afterHighlight}

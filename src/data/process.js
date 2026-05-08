@@ -1,30 +1,39 @@
+import stepOneImage from '../assets/1.svg'
+import stepTwoImage from '../assets/2.svg'
+import stepThreeImage from '../assets/3.svg'
+import stepFourImage from '../assets/4.svg'
+
 export const processSteps = [
   {
     id: 1,
-    title: 'Define Your Needs',
+    title: 'Plan & Approve',
     description:
-      'Share role scope, seniority, tech stack, and culture signals so we can align sourcing from day one.',
+      'Define hiring demand, generate role descriptions with AI, and validate budgets before opening requisitions.',
     accent: 'define',
+    img: stepOneImage,
   },
   {
     id: 2,
-    title: 'Source & Vet Talent',
+    title: 'Source & Screen',
     description:
-      'We screen portfolios, run structured interviews, and validate references against your bar.',
+      'Broadcast across channels, parse resumes, and automatically shortlist the strongest profiles.',
     accent: 'vet',
+    img: stepTwoImage,
   },
   {
     id: 3,
-    title: 'Connect & Hire',
+    title: 'Assess & Interview',
     description:
-      'Meet shortlisted candidates on your timeline. We help coordinate loops and decision-making.',
+      'Run assessments and AI-avatar interviews with transcript-based scoring and structured decision support.',
     accent: 'hire',
+    img: stepThreeImage,
   },
   {
     id: 4,
-    title: 'Scale & Succeed',
+    title: 'Offer, Onboard & Optimize',
     description:
-      'Expand pods, add specialties, or iterate on hiring plans as your team grows.',
+      'Automate scheduling, offers, and onboarding, then improve outcomes with analytics and recruiter copilot insights.',
     accent: 'scale',
+    img: stepFourImage,
   },
 ]
