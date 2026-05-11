@@ -49,6 +49,8 @@ export default {
       backgroundImage: {
         'dot-grid':
           'radial-gradient(circle, rgba(15,15,15,0.08) 1px, transparent 1px)',
+        'dot-grid-dark':
+          'radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px)',
       },
       backgroundSize: {
         dot: '24px 24px',

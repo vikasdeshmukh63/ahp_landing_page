@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Founder', href: '#founder' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ activeThemeLabel, onThemeToggle }) {
   return (
     <motion.header
       className="sticky top-4 z-50 px-4 sm:px-6 lg:px-8"
@@ -18,12 +18,12 @@ export default function Navbar() {
       transition={{ duration: 0.55, ease: 'easeOut' }}
     >
       <motion.div
-        className="mx-auto w-full max-w-5xl rounded-full border border-ink/10 bg-white/90 p-2 shadow-[0_10px_30px_-14px_rgba(15,23,42,0.45)] backdrop-blur-md"
+        className="mx-auto w-full max-w-5xl rounded-full border border-white/10 bg-[#060d1f]/85 p-2 shadow-[0_12px_40px_-18px_rgba(0,0,0,0.65)] backdrop-blur-md"
         whileHover={{ y: -2 }}
         transition={{ duration: 0.25 }}
       >
         <nav className="flex items-center justify-between gap-4">
-          <motion.a href="#top" className="flex h-12 items-center rounded-full px-4 text-lg font-bold tracking-tight text-ink" whileHover={{ scale: 1.04 }}>
+          <motion.a href="#top" className="flex h-12 items-center rounded-full px-4 text-lg font-bold tracking-tight text-white" whileHover={{ scale: 1.04 }}>
             ETIP
           </motion.a>
           <div className="hidden items-center gap-2 md:flex">
@@ -31,7 +31,7 @@ export default function Navbar() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                className="rounded-full px-4 py-2 text-sm font-semibold text-ink hover:bg-blue-50 hover:text-blue-600"
+                className="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 hover:bg-white/10 hover:text-[rgb(var(--accent-rgb))]"
                 whileHover={{ y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -39,11 +39,21 @@ export default function Navbar() {
               </motion.a>
             ))}
           </div>
-          <a href="#founder">
-            <Button variant="primary" className="h-12 px-6 text-base">
-              Book Now
-            </Button>
-          </a>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={onThemeToggle}
+              className="rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold text-slate-200 transition hover:border-[rgb(var(--accent-rgb))]/50 hover:text-[rgb(var(--accent-rgb))]"
+              aria-label="Switch accent color (blue or lime)"
+            >
+              {activeThemeLabel}
+            </button>
+            <a href="#founder">
+              <Button variant="lime" className="h-12 px-6 text-base">
+                Book Now
+              </Button>
+            </a>
+          </div>
         </nav>
       </motion.div>
     </motion.header>

@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { AccentThemeProvider } from './context/AccentThemeContext.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import AIInterviewPanel from './components/AIInterviewPanel.jsx'
@@ -11,23 +13,44 @@ import FounderNote from './components/FounderNote.jsx'
 import FinalCTA from './components/FinalCTA.jsx'
 import Footer from './components/Footer.jsx'
 
+const accentThemes = [
+  { accent: 'blue', label: 'Blue' },
+  { accent: 'lime', label: 'Lime' },
+]
+
 export default function App() {
+  const [themeIndex, setThemeIndex] = useState(0)
+
+  const activeTheme = accentThemes[themeIndex]
+
+  useEffect(() => {
+    const root = document.documentElement
+    root.classList.add('dark')
+    root.setAttribute('data-accent', activeTheme.accent)
+  }, [activeTheme])
+
+  function handleThemeToggle() {
+    setThemeIndex((prev) => (prev + 1) % accentThemes.length)
+  }
+
   return (
-    <div className="min-h-screen bg-cream text-ink">
-      <Navbar />
-      <main>
-        <Hero />
-        <AIInterviewPanel />
-        <Features />
-        <Pillars />
-        <Lifecycle />
-        <Process />
-        <Architecture />
-        <Testimonials />
-        <FounderNote />
-        <FinalCTA />
-      </main>
-      <Footer />
-    </div>
+    <AccentThemeProvider accent={activeTheme.accent}>
+      <div className="min-h-screen bg-[var(--app-bg)] text-[var(--app-fg)]">
+        <Navbar activeThemeLabel={activeTheme.label} onThemeToggle={handleThemeToggle} />
+        <main>
+          <Hero />
+          <AIInterviewPanel />
+          <Features />
+          <Pillars />
+          <Lifecycle />
+          <Process />
+          <Architecture />
+          <Testimonials />
+          <FounderNote />
+          <FinalCTA />
+        </main>
+        <Footer />
+      </div>
+    </AccentThemeProvider>
   )
 }

@@ -1,7 +1,11 @@
-import stepOneImage from '../assets/1.svg'
-import stepTwoImage from '../assets/2.svg'
-import stepThreeImage from '../assets/3.svg'
-import stepFourImage from '../assets/4.svg'
+import stepOneBlue from '../assets/1b.svg'
+import stepOneLime from '../assets/1l.svg'
+import stepTwoBlue from '../assets/2b.svg'
+import stepTwoLime from '../assets/2l.svg'
+import stepThreeBlue from '../assets/3b.svg'
+import stepThreeLime from '../assets/3l.svg'
+import stepFourBlue from '../assets/4b.svg'
+import stepFourLime from '../assets/4l.svg'
 
 export const processSteps = [
   {
@@ -10,7 +14,7 @@ export const processSteps = [
     description:
       'Define hiring demand, generate role descriptions with AI, and validate budgets before opening requisitions.',
     accent: 'define',
-    img: stepOneImage,
+    illustration: { blue: stepOneBlue, lime: stepOneLime },
   },
   {
     id: 2,
@@ -18,7 +22,7 @@ export const processSteps = [
     description:
       'Broadcast across channels, parse resumes, and automatically shortlist the strongest profiles.',
     accent: 'vet',
-    img: stepTwoImage,
+    illustration: { blue: stepTwoBlue, lime: stepTwoLime },
   },
   {
     id: 3,
@@ -26,7 +30,7 @@ export const processSteps = [
     description:
       'Run assessments and AI-avatar interviews with transcript-based scoring and structured decision support.',
     accent: 'hire',
-    img: stepThreeImage,
+    illustration: { blue: stepThreeBlue, lime: stepThreeLime },
   },
   {
     id: 4,
@@ -34,6 +38,6 @@ export const processSteps = [
     description:
       'Automate scheduling, offers, and onboarding, then improve outcomes with analytics and recruiter copilot insights.',
     accent: 'scale',
-    img: stepFourImage,
+    illustration: { blue: stepFourBlue, lime: stepFourLime },
   },
 ]
