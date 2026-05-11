@@ -2,41 +2,10 @@ import Button from './ui/Button.jsx'
 import ParallaxSection from './ui/ParallaxSection.jsx'
 import { motion } from 'motion/react'
 
-function RunnerFlag({ className = '' }) {
-  return (
-    <svg
-      viewBox="0 0 160 120"
-      className={className}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden
-    >
-      <path
-        d="M32 96 C48 64 56 40 72 32 C88 24 96 36 104 48"
-        stroke="#94a3b8"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <circle cx="56" cy="28" r="9" fill="#e2e8f0" />
-      <path
-        d="M56 40 L56 96"
-        stroke="#64748b"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-      />
-      <path
-        d="M56 44 L96 36 L96 60 L56 68 Z"
-        fill="rgb(var(--accent-rgb))"
-        stroke="#040814"
-        strokeWidth="1.5"
-      />
-    </svg>
-  )
-}
-
 export default function FinalCTA() {
   return (
     <ParallaxSection
+      id="cta"
       className="border-t border-white/5 bg-[#040814] bg-dot-grid-dark bg-dot-size-dot px-4 py-20 sm:px-6 lg:px-8"
       strength={52}
     >
@@ -50,15 +19,6 @@ export default function FinalCTA() {
           show: { transition: { staggerChildren: 0.16, delayChildren: 0.06 } },
         }}
       >
-        <motion.div
-          className="mb-6 flex justify-center"
-          variants={{ hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <motion.div animate={{ y: [0, -6, 0] }} transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}>
-            <RunnerFlag className="h-24 w-40" />
-          </motion.div>
-        </motion.div>
         <motion.h2
           className="text-balance text-3xl font-extrabold tracking-tight text-white sm:text-4xl md:text-5xl"
           variants={{ hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } }}

@@ -9,9 +9,9 @@ import Lifecycle from './components/Lifecycle.jsx'
 import Process from './components/Process.jsx'
 import Architecture from './components/Architecture.jsx'
 import Testimonials from './components/Testimonials.jsx'
-import FounderNote from './components/FounderNote.jsx'
 import FinalCTA from './components/FinalCTA.jsx'
 import Footer from './components/Footer.jsx'
+import MockChatbot from './components/MockChatbot.jsx'
 
 const accentThemes = [
   { accent: 'blue', label: 'Blue' },
@@ -46,10 +46,10 @@ export default function App() {
           <Process />
           <Architecture />
           <Testimonials />
-          <FounderNote />
           <FinalCTA />
         </main>
         <Footer />
+        <MockChatbot />
       </div>
     </AccentThemeProvider>
   )

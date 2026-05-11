@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { ChevronLeft, ChevronRight, Volume2 } from 'lucide-react'
+import { Volume2 } from 'lucide-react'
 import { motion } from 'motion/react'
 import Button from './ui/Button.jsx'
 import ParallaxSection from './ui/ParallaxSection.jsx'
@@ -51,20 +51,13 @@ export default function AIInterviewPanel() {
         </motion.div>
 
         <motion.div
-          className="mt-12 flex items-center justify-between gap-4"
+          className="mt-12 flex justify-center"
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.28, margin: '0px 0px -10% 0px' }}
           transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
         >
-          <button
-            className="hidden h-12 w-12 items-center justify-center rounded-full border border-white/15 text-slate-400 lg:flex"
-            aria-label="Previous avatar"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-
-          <div className="mx-auto flex flex-col items-center">
+          <div className="flex flex-col items-center">
             <div className="rounded-full border-8 border-white/10 bg-[#060d1f] p-4 shadow-[0_0_0_1px_rgba(200,242,58,0.15)]">
               <video
                 ref={videoRef}
@@ -87,11 +80,6 @@ export default function AIInterviewPanel() {
               Hello! I&apos;m Arjun, your AI Tech Lead interviewer. I&apos;ll assess your technical skill...
             </p>
 
-            <div className="mt-5 flex items-center gap-3">
-              <span className="h-2.5 w-8 rounded-full bg-[rgb(var(--accent-rgb))]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-white/25" />
-            </div>
-
             <Button
               variant="lime"
               className="mt-7 flex items-center gap-2 px-8 py-3 text-base"
@@ -101,13 +89,6 @@ export default function AIInterviewPanel() {
               {isPlaying ? 'Pause Speaking' : 'Hear Me Speak'}
             </Button>
           </div>
-
-          <button
-            className="hidden h-12 w-12 items-center justify-center rounded-full border border-white/15 text-slate-400 lg:flex"
-            aria-label="Next avatar"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </button>
         </motion.div>
       </div>
     </ParallaxSection>

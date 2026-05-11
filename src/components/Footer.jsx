@@ -46,11 +46,8 @@ export default function Footer() {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.div variants={staggerItem} className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-[rgb(var(--accent-rgb))] text-sm font-bold text-[rgb(var(--accent-contrast-rgb))]">
-              P
-            </span>
             <span className="text-lg font-bold tracking-tight text-white">
-              Pixel
+              ETIP
             </span>
           </motion.div>
 
@@ -102,7 +99,7 @@ export default function Footer() {
         className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/4 select-none text-[clamp(4rem,18vw,14rem)] font-black leading-none tracking-tighter text-white/[0.04]"
         aria-hidden
       >
-        PIXEL
+        ETIP
       </p>
     </footer>
   )

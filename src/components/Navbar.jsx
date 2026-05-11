@@ -6,7 +6,6 @@ const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'Process', href: '#process' },
   { label: 'Stories', href: '#stories' },
-  { label: 'Founder', href: '#founder' },
 ]
 
 export default function Navbar({ activeThemeLabel, onThemeToggle }) {
@@ -48,7 +47,7 @@ export default function Navbar({ activeThemeLabel, onThemeToggle }) {
             >
               {activeThemeLabel}
             </button>
-            <a href="#founder">
+            <a href="#cta">
               <Button variant="lime" className="h-12 px-6 text-base">
                 Book Now
               </Button>
