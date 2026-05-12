@@ -78,7 +78,7 @@ export default function HeroMockGraphs() {
 
   return (
     <motion.div
-      className="pointer-events-none relative mx-auto mt-12 w-full max-w-[min(100%,400px)] sm:max-w-[420px] lg:mt-0 lg:max-w-[440px] lg:justify-self-end"
+      className="pointer-events-none relative mx-auto mt-12 w-full max-w-[min(100%,456px)] sm:max-w-[480px] lg:mt-0 lg:max-w-[508px] lg:justify-self-end"
       initial={reduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={reduceMotion ? false : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}
@@ -86,7 +86,7 @@ export default function HeroMockGraphs() {
     >
       <div className="overflow-hidden rounded-2xl border border-white/12 bg-[#060d1f]/92 shadow-[0_24px_64px_-28px_rgba(0,0,0,0.75)] backdrop-blur-md ring-1 ring-[rgb(var(--accent-rgb))]/15">
         {/* Header */}
-        <header className="flex items-center gap-2 border-b border-white/10 px-3 py-2.5 sm:px-4">
+        <header className="flex items-center gap-2 border-b border-white/10 px-3.5 py-3 sm:px-4">
           <div className="min-w-[2.75rem] flex-1" aria-hidden />
           <p className="min-w-0 flex-[2] truncate text-center text-[11px] font-semibold text-white sm:text-xs">
             Hiring plan · Q1 rollout
@@ -99,13 +99,13 @@ export default function HeroMockGraphs() {
         </header>
 
         {/* KPI row — Graph 1 */}
-        <div className="grid grid-cols-2 gap-2 p-3 sm:grid-cols-4 sm:gap-2 sm:p-3.5">
+        <div className="grid grid-cols-2 gap-2.5 p-3.5 sm:grid-cols-4 sm:gap-3 sm:p-4">
           {kpis.map((k) => (
             <div
               key={k.key}
-              className="rounded-xl border border-white/10 bg-white/[0.05] px-2.5 py-2.5 sm:px-3"
+              className="rounded-xl border border-white/10 bg-white/[0.05] px-3 py-3 sm:px-3.5"
             >
-              <p className="text-lg font-bold tabular-nums leading-tight text-white sm:text-xl">
+              <p className="text-xl font-bold tabular-nums leading-tight text-white">
                 {k.format(k.value)}
               </p>
               <p className="mt-1 text-[10px] font-medium uppercase tracking-wide text-slate-500 sm:text-[11px]">
@@ -116,11 +116,11 @@ export default function HeroMockGraphs() {
         </div>
 
         {/* Horizontal bars — Graph 2 */}
-        <div className="border-t border-white/10 px-3 pb-3.5 pt-2.5 sm:px-4 sm:pb-4">
-          <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
+        <div className="border-t border-white/10 px-3.5 pb-4 pt-3 sm:px-4 sm:pb-5">
+          <p className="mb-3.5 text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">
             Headcount by team
           </p>
-          <div className="flex flex-col gap-2.5">
+          <div className="flex flex-col gap-3">
             {teamRows.map((row) => {
               const pct = clamp(row.current / row.total, 0, 1) * 100;
               return (
@@ -132,7 +132,7 @@ export default function HeroMockGraphs() {
                     {row.label}
                   </span>
                   <div className="min-w-0">
-                    <div className="h-2 overflow-hidden rounded-full bg-white/[0.08] sm:h-2.5">
+                    <div className="h-2.5 overflow-hidden rounded-full bg-white/[0.08] sm:h-3">
                       <div
                         className="h-full rounded-full bg-[rgb(var(--accent-rgb))] shadow-[0_0_12px_-2px_rgba(var(--accent-rgb),0.65)] transition-[width] duration-300 ease-out"
                         style={{ width: `${pct}%` }}
