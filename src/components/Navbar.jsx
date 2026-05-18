@@ -3,10 +3,11 @@ import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import Button from './ui/Button.jsx'
 
+/** Order matches section order in App.jsx (top → bottom). */
 const navLinks = [
-  { label: 'Architecture', href: '#architecture' },
   { label: 'Features', href: '#features' },
   { label: 'Process', href: '#process' },
+  { label: 'Architecture', href: '#architecture' },
   { label: 'Stories', href: '#stories' },
 ]
 

@@ -37,7 +37,7 @@ export default function Process() {
           {autonomousStages.map((stage, index) => (
             <motion.article
               key={stage.id}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm"
+              className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm hover:border-[rgb(var(--accent-rgb))]"
               {...scrollCardMotion()}
               whileHover={{ y: -4 }}
             >
@@ -91,7 +91,7 @@ export default function Process() {
                   <img
                     src={step.illustration[accent]}
                     alt={step.title}
-                    className="h-auto max-h-[min(56vw,320px)] w-full rounded-2xl border border-[rgb(var(--accent-rgb))]/35 object-cover shadow-[0_0_0_1px_rgba(var(--accent-rgb),0.12),0_20px_50px_-20px_rgba(0,0,0,0.5),0_0_40px_-12px_rgba(var(--accent-rgb),0.15)] sm:max-h-none"
+                    className="h-auto max-h-[min(56vw,320px)] w-full rounded-2xl border border-[rgb(var(--accent-rgb))] object-cover shadow-[0_0_0_1px_rgba(var(--accent-rgb),0.12),0_20px_50px_-20px_rgba(0,0,0,0.5),0_0_40px_-12px_rgba(var(--accent-rgb),0.15)] sm:max-h-none"
                   />
                 </motion.div>
               </motion.div>

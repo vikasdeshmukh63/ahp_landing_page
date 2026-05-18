@@ -58,7 +58,7 @@ export default function Features() {
             return (
               <motion.article
                 key={f.title}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-[rgb(var(--accent-rgb))]/30 hover:shadow-xl"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-[rgb(var(--accent-rgb))] hover:shadow-xl"
                 {...scrollCardMotion()}
                 whileHover={{ y: -4 }}
               >

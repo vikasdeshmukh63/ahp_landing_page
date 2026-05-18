@@ -61,7 +61,7 @@ export default function Pillars() {
             return (
               <motion.article
                 key={pillar.title}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-[rgb(var(--accent-rgb))]/25 hover:shadow-xl"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-[rgb(var(--accent-rgb))] hover:shadow-xl"
                 {...scrollCardMotion()}
                 whileHover={{ y: -4 }}
               >

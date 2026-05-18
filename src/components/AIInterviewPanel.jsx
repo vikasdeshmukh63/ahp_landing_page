@@ -48,7 +48,7 @@ export default function AIInterviewPanel() {
       strength={56}
     >
       <motion.div
-        className="mx-auto max-w-6xl rounded-2xl border border-white/10 bg-gradient-to-b from-[#0a1228] to-[#040814] p-5 text-white shadow-[0_24px_80px_-36px_rgba(0,0,0,0.75)] sm:rounded-3xl sm:p-8 md:p-12"
+        className="mx-auto max-w-7xl rounded-2xl border border-white/10 bg-gradient-to-b from-[#0a1228] to-[#040814] p-5 text-white shadow-[0_24px_80px_-36px_rgba(0,0,0,0.75)] sm:rounded-3xl sm:p-8 md:p-12"
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"

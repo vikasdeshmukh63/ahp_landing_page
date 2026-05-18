@@ -173,7 +173,7 @@ export default function MockChatbot() {
               type="button"
               onClick={sendDraft}
               disabled={!draft.trim()}
-              className="mb-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--accent-rgb))] text-[rgb(var(--accent-contrast-rgb))] transition enabled:hover:brightness-110 enabled:active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent-rgb))]"
+              className="mb-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[rgb(var(--accent-rgb))] text-[rgb(var(--accent-contrast-rgb))] transition enabled:active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent-rgb))]"
               aria-label="Send message"
             >
               <Send className="h-4 w-4" />
@@ -185,7 +185,7 @@ export default function MockChatbot() {
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className={`pointer-events-auto relative flex h-14 w-14 items-center justify-center rounded-full shadow-[0_12px_40px_-12px_rgba(var(--accent-rgb),0.85)] ring-4 ring-black/25 transition hover:brightness-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent-rgb))] ${
+        className={`pointer-events-auto relative flex h-14 w-14 items-center justify-center rounded-full shadow-[0_12px_40px_-12px_rgba(var(--accent-rgb),0.85)] ring-4 ring-black/25 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[rgb(var(--accent-rgb))] ${
           open
             ? 'bg-[rgb(var(--accent-rgb))] text-[rgb(var(--accent-contrast-rgb))]'
             : 'animate-pulse-soft bg-[rgb(var(--accent-rgb))] text-[rgb(var(--accent-contrast-rgb))]'
