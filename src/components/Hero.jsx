@@ -162,7 +162,7 @@ export default function Hero() {
       <section
         ref={heroRef}
         id="top"
-        className="relative min-h-screen overflow-hidden bg-[#040814] px-4 pb-16 pt-12 text-white sm:px-6 sm:pb-20 sm:pt-16 lg:px-8"
+        className="relative min-h-screen overflow-hidden bg-[#040814] pb-16 pt-6 text-white sm:pb-20 sm:pt-8"
       >
         <div className="pointer-events-none absolute inset-0 opacity-90" aria-hidden>
           {reduceMotion ? (
@@ -207,7 +207,7 @@ export default function Hero() {
           aria-hidden
         />
 
-        <div className="relative z-[3] mx-auto grid min-h-[calc(100dvh-5rem)] w-full max-w-7xl grid-cols-1 items-center gap-8 py-8 text-left pointer-events-none sm:min-h-[calc(100dvh-5.5rem)] sm:gap-10 sm:py-14 lg:grid-cols-2 lg:gap-12 xl:gap-16">
+        <div className="relative z-[3] mx-auto grid min-h-[calc(100dvh-5rem)] w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 py-8 text-left pointer-events-none sm:min-h-[calc(100dvh-5.5rem)] sm:gap-10 sm:px-6 sm:py-14 lg:grid-cols-2 lg:gap-12 lg:px-8 xl:gap-16">
           <motion.div
             className="w-full max-w-3xl lg:max-w-none"
             variants={staggerContainer}
@@ -225,7 +225,7 @@ export default function Hero() {
               className="text-balance text-3xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl"
             >
               Start hiring world&apos;s{" "}
-              <span className="text-[rgb(var(--accent-rgb))]">top talent</span>
+              <span className="text-[rgb(var(--accent-rgb))]">Top talent</span>
             </motion.h1>
             <motion.p
               variants={itemVariant}
@@ -273,7 +273,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          <div className="pointer-events-auto w-full lg:max-w-none">
+          <div className="pointer-events-auto w-full lg:max-w-none flex justify-end">
             <HeroMockGraphs />
           </div>
         </div>

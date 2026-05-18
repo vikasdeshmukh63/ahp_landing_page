@@ -36,16 +36,12 @@ export default function Navbar({ activeThemeLabel, onThemeToggle }) {
 
   return (
     <motion.header
-      className="sticky top-2 z-50 px-3 sm:top-4 sm:px-6 lg:px-8"
-      initial={reduceMotion ? false : { opacity: 0, y: -18 }}
+      className="fixed inset-x-0 top-0 z-50 w-full border-b border-white/10 bg-[#060d1f]/95 backdrop-blur-md"
+      initial={reduceMotion ? false : { opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.55, ease: 'easeOut' }}
+      transition={{ duration: 0.45, ease: 'easeOut' }}
     >
-      <motion.div
-        className="mx-auto w-full max-w-7xl rounded-2xl border border-white/10 bg-[#060d1f]/90 p-2 shadow-[0_12px_40px_-18px_rgba(0,0,0,0.65)] backdrop-blur-md sm:rounded-full"
-        whileHover={reduceMotion ? undefined : { y: -2 }}
-        transition={{ duration: 0.25 }}
-      >
+      <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between gap-2 sm:gap-4">
           <motion.a
             href="#top"
@@ -58,7 +54,7 @@ export default function Navbar({ activeThemeLabel, onThemeToggle }) {
               alt="ETIP"
               width={52}
               height={52}
-              className="h-9 w-auto sm:h-11"
+              className="h-[80px] w-auto"
             />
           </motion.a>
 
@@ -136,7 +132,7 @@ export default function Navbar({ activeThemeLabel, onThemeToggle }) {
             </motion.div>
           ) : null}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </motion.header>
   )
 }

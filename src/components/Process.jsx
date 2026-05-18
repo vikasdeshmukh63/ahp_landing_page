@@ -28,7 +28,7 @@ export default function Process() {
             <SectionHeading
               eyebrow="How it works"
               title="From requisition to onboarding in a"
-              highlight="single autonomous flow"
+              highlight="Single autonomous flow"
             />
           </motion.div>
         </motion.div>

@@ -25,7 +25,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
           Ready to launch your{' '}
-          <span className="text-[rgb(var(--accent-rgb))]">autonomous hiring workflow?</span>
+          <span className="text-[rgb(var(--accent-rgb))]">Autonomous hiring workflow?</span>
         </motion.h2>
         <motion.p
           className="mx-auto mt-5 max-w-lg text-slate-400"

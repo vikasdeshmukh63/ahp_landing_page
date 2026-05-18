@@ -27,7 +27,7 @@ export default function Testimonials() {
             <SectionHeading
               eyebrow="Social proof"
               title="Want to see real"
-              highlight="client stories?"
+              highlight="Client stories?"
             />
           </motion.div>
 

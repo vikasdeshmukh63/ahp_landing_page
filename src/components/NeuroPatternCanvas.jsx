@@ -372,7 +372,7 @@ void main() {
     <div ref={wrapRef} className={`relative h-full min-h-[220px] w-full sm:min-h-[280px] ${className}`}>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 block h-full w-full cursor-crosshair"
+        className="absolute inset-0 block h-full w-full"
         aria-hidden
       />
     </div>

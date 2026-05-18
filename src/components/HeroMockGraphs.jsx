@@ -78,7 +78,7 @@ export default function HeroMockGraphs() {
 
   return (
     <motion.div
-      className="pointer-events-none relative mx-auto mt-12 w-full max-w-[min(100%,456px)] sm:max-w-[480px] lg:mt-0 lg:max-w-[508px] lg:justify-self-end"
+      className="pointer-events-none relative mx-auto mt-12 w-full max-w-[min(100%,456px)] sm:max-w-[480px] lg:mt-0 lg:max-w-[508px] lg:justify-self-center"
       initial={reduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={reduceMotion ? false : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.35 }}

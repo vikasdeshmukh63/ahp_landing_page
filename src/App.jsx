@@ -38,7 +38,7 @@ export default function App() {
     <AccentThemeProvider accent={activeTheme.accent}>
       <div className="min-h-screen overflow-x-clip bg-[var(--app-bg)] text-[var(--app-fg)]">
         <Navbar activeThemeLabel={activeTheme.label} onThemeToggle={handleThemeToggle} />
-        <main>
+        <main className="pt-14 sm:pt-16">
           <Hero />
           <AIInterviewPanel />
           <AdaptiveAssessments />

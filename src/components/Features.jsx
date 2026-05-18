@@ -41,7 +41,7 @@ export default function Features() {
             <SectionHeading
               eyebrow="Platform"
               title="Everything you need, all in"
-              highlight="one place"
+              highlight="One place"
               className="max-w-3xl"
             />
           </motion.div>
